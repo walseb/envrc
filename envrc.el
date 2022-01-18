@@ -230,6 +230,7 @@ variable names and values."
   (unless (file-exists-p (expand-file-name ".envrc" env-dir))
     (error "%s is not a directory with a .envrc" env-dir))
   (message "Running direnv in %s..." env-dir)
+  (redisplay)
   (let ((stderr-file (make-temp-file "envrc"))
         result)
     (unwind-protect
